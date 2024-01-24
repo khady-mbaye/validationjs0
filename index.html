@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"   rel="stylesheet"   integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"   crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <title>TODOLIST AVEC LOCALSTORAGE</title>
+</head>
+<body class="Dark">
+  <section class="sec1 container-fluid">
+    <form class="container  text-center d-flex flex-column justify-content-center align-items-center" onsubmit="return false">
+      <div class="d-flex justify-content-around w-100 py-5">
+              <h1 class="text-white display-4 fw-bolder">TODO</h1>
+            <button type="button" class="bg-transparent border-0" id="toggle"> <span id="torrr" > <img src="./images/icon-sun.svg" alt="hg"  ></button>
+      </div>
+      <div class=" p-2 rounded-3 border-0 add  d-flex justify-content-between align-items-center">
+        <div>
+          <button type="button" class=" bg-transparent d-flex justify-content-center align-items-center  boutoncircle disabled  border border-secondary">
+              <img src="./images/icon-check.svg" class="  opacity-0 icone-checked" alt="nj">
+          </button>
+        </div>
+        
+        <div class="container_input w-75 ">
+              <input class=" form-control search" id="texttodo" type="text" placeholder="Create a new todo"  aria-label="Search">
+        </div>
+        <div>
+            <button type="button" class="btn opacity-0" >
+              <img src="./images/icon-cross.svg" class=" icone-checked" alt="nj">
+           </button>
+      </div>
+      
+      </div>
+    </form>
+    
+    <div class="container d-flex  flex-column justify-content-center align-items-center mt-4 " id="divforAdd">
+ 
+
+   </div>
+   <div class="container d-sm-none d-flex flex-column justify-content-center align-items-center mb-4  " >
+    <div class=" p-2 rounded-bottom border-0 added   ">
+    <div class="d-sm-block text-center  itemadded">
+      <a href="#" class=" liens text-decoration-none" disabled > <span class="number">0</span>  items left</a>
+
+    </div>
+
+
+    <div class=" d-sm-block text-center  itemadded">
+      <a href="#" class=" liens text-decoration-none" onclick="clearCompleted()" role="button" data-bs-toggle="button">clear completed</a>
+  </div>
+</div>
+</div>
+<div class="container d-flex flex-column justify-content-center align-items-center  " >
+      <div class=" p-2   border-0 added   ">
+      <div class="d-sm-block text-center d-none itemadded">
+        <a href="#" class=" liens text-decoration-none" disabled > <span class="number">0</span>  items left</a>
+
+      </div>
+      <div class="d-flex justify-content-center itemadded bas">
+        <a href="#" id="all" class=" liens text-decoration-none active " onclick="miseajour()" role="button" data-bs-toggle="button">All</a>
+        <a href="#" id="activiste" class=" liens text-decoration-none " onclick="filterActive()" role="button" data-bs-toggle="button">Active</a>
+        <a href="#" id="completed" class=" liens text-decoration-none active" onclick="filterComplete()"  data-bs-toggle="button">Complete</a>
+
+    </div>
+
+      <div class=" d-sm-block text-center d-none itemadded">
+        <a href="#" class=" liens text-decoration-none" onclick="clearCompleted()" role="button" data-bs-toggle="button">clear completed</a>
+    </div>
+  </div>
+</div>
+
+ 
+
+ 
+  </section>
+
+
+  
+ 
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>   
+   <script src="script.js"></script>
+   <!-- <script src="sssssssssss.js"></script> -->
+</body>
+</html>

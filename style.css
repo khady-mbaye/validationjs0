@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+
+    background-color: black;
+}
+body.Dark .sec1 {
+    height: 300px;
+    background-image: url(./images/bg-desktop-dark.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.light {
+    background-color: hsl(236, 33%, 92%);
+}
+
+body.light .sec1 {
+    height: 300px;
+    background-image: url(./images/bg-desktop-light.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.boutoncircle {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+.search {
+    width: 100% !important;
+    background-color: transparent !important;
+}
+
+body.light .search {
+    width: 100% !important;
+    background-color: transparent !important;
+    color: black !important;
+}
+body.Dark .searchchecked {
+    width: 100% !important;
+    background-color: transparent !important;
+    color: rgb(107, 102, 102) !important;
+    text-decoration: line-through !important;
+}
+body.light .searchchecked {
+    width: 100% !important;
+    background-color: transparent !important;
+    color: hsl(233, 11%, 84%) !important;
+    text-decoration: line-through !important;
+}
+input[type=text] {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none;
+    color: hsl(233, 11%, 84%);
+
+}
+body.Dark input[type=text]:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none;
+    color: hsl(233, 11%, 84%);
+}
+body.light input[type=text]:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none;
+    color: rgb(107, 102, 102);
+}
+.add:first-child {
+    border-radius: 10px 10px 0 0;
+}
+.added:last-child {
+    border-radius: 0 0 10px 10px;
+}
+body.Dark .add {
+    background-color: hsl(235, 24%, 19%);
+    width: 50%;
+    min-width: 300px;
+    border-bottom: 1px solid rgb(107, 102, 102);
+}
+body.light .add {
+    background-color: hsl(0, 0%, 98%);
+    color: black;
+    width: 50%;
+    min-width: 300px;
+    border-bottom: 1px solid hsl(233, 11%, 84%);
+
+}
+.checkedbg {
+    background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.troisliens {
+    width: 30%;
+    min-width: 120px;
+}
+body.Dark .added {
+    background-color: hsl(235, 24%, 19%);
+    width: 50%;
+    min-width: 300px;
+    border-bottom: 1px solid rgb(107, 102, 102);
+    display: flex;
+    flex-wrap: wrap !important;
+    gap: 1rem;
+}
+body.light .added {
+    background-color: hsl(0, 0%, 98%);
+    color: black;
+    width: 50%;
+    min-width: 300px;
+    border-bottom: 1px solid hsl(233, 11%, 84%);
+    display: flex;
+    flex-wrap: wrap !important;
+    gap: 1rem;
+}
+.itemadded {
+    flex: 1;
+    gap: 1rem;
+
+}
+.color {
+    background-color: hsl(235, 21%, 11%) - Light hsl(234, 39%, 85%) - Light Grayish hsl(236, 33%, 92%) - Dark Grayish hsl(234, 11%, 52%) - Very Dark hsl(233, 14%, 35%) - Very Dark Grayish hsl(237, 14%, 26%) - linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)
+}
+.liens {
+    color: rgb(107, 102, 102);
+}
+.liens:hover {
+    color: blue;
+}
