@@ -1,5 +1,14 @@
 let sec1 = document.querySelector(".sec1");
 let page = document.getElementsByTagName("body");
+var btns = document.getElementsByClassName("bouton");
+
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function activenavlink() {
+  var current = document.getElementsByClassName("active-link");
+  current[0].className = current[0].className.replace(" active-link", "");
+  this.className += " active-link";
+  });
+}
 
 //recupration du todotabletest dans de cas ou il stock un valeur et un tableau vide dans le cas contraire
 let tabobj =  JSON.parse(localStorage.getItem("todotabletest"))||[];
@@ -7,7 +16,7 @@ let background = JSON.parse(localStorage.getItem("lebackground")) || [];
 
 function miseajour() {
   localStorage.setItem("todotabletest", JSON.stringify(tabobj));
-  afficher(tabobj)
+  afficher(tabobj)  
 }
 miseajour()
 
@@ -55,6 +64,7 @@ var input = document.getElementById("texttodo");
 input.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
       ajouter()
+      activenavlink()
   }
 });
 
@@ -85,28 +95,22 @@ function afficher (text){
     tbody.innerHTML ="";
     text.forEach((element,index) => {
       tbody.innerHTML += `
-      <div class=" p-2  add   d-flex justify-content-between align-items-center">
-       <div>
-       <button ${element.ischecked === false ? `class="bg-transparent d-flex justify-content-center align-items-center  boutoncircle  border border-secondary" onclick="ckeck(${index})"` : `class=" bg-transparent d-flex justify-content-center align-items-center  boutoncircle checkedbg  border-0  border border-secondary"onclick="ckeck(${index})"`}>
+        <div class=" p-2  add   d-flex justify-content-between align-items-center">
+          <button ${element.ischecked === false ? `class="bg-transparent d-flex justify-content-center align-items-center  boutoncircle  border border-secondary" onclick="ckeck(${index})"` : `class=" bg-transparent d-flex justify-content-center align-items-center  boutoncircle checkedbg  border-0  border border-secondary"onclick="ckeck(${index})"`}>
 
-          <img src="./images/icon-check.svg" ${element.ischecked === false ? 'class=" opacity-0 icone-checked "':'class=" icone-checked"'}>
-      </button>
-    </div>
-    
-    <div class="container_input w-75 ">
-          <input ${element.ischecked === false ?`class=" form-control search "`:`class=" form-control searchchecked " `}   type="text" readonly value="${element.todocontain}"  aria-label="Search">
-    </div>
-    <div>
-        <button class="btn" onclick="supprimer(${index})">
-          <img src="./images/icon-cross.svg" class="  icone-checked">
-       </button>
-  </div>
+              <img src="./images/icon-check.svg" ${element.ischecked === false ? 'class=" opacity-0 icone-checked "':'class=" icone-checked"'}>
+          </button>
+          <div class="container_input w-75 ">
+            <input ${element.ischecked === false ?`class=" form-control search w-100"`:`class=" form-control searchchecked " `}   type="text" readonly value="${element.todocontain}"  aria-label="Search">
+          </div>
+          <button class="btn" onclick="supprimer(${index})">
+            <img src="./images/icon-cross.svg" class="  icone-checked">
+          </button>
 
-  </div>
-   `;
+        </div>`;
     });
   
-  
+   
   }
  
 

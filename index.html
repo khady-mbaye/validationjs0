@@ -10,15 +10,15 @@
 </head>
 <body class="Dark">
   <section class="sec1 container-fluid">
-    <form class="container  text-center d-flex flex-column justify-content-center align-items-center" onsubmit="return false">
-      <div class="d-flex justify-content-around w-100 py-5">
-              <h1 class="text-white display-4 fw-bolder">TODO</h1>
-            <button type="button" class="bg-transparent border-0" id="toggle"> <span id="torrr" > <img src="./images/icon-sun.svg" alt="hg"  ></button>
+    <form class="text-center d-flex flex-column justify-content-center align-items-center" onsubmit="return false">
+      <div class="d-flex justify-content-around  py-5">
+              <h1 class="text-white display-4 fw-bolder pe-5">TODO</h1>
+            <button type="button" class="bg-transparent border-0 ps-5" id="toggle"> <span id="torrr" > <img src="./images/icon-sun.svg"></button>
       </div>
       <div class=" p-2 rounded-3 border-0 add  d-flex justify-content-between align-items-center">
-        <div>
-          <button type="button" class=" bg-transparent d-flex justify-content-center align-items-center  boutoncircle disabled  border border-secondary">
-              <img src="./images/icon-check.svg" class="  opacity-0 icone-checked" alt="nj">
+        <div class="">
+          <button type="button" class=" p bg-transparent d-flex justify-content-center align-items-center  boutoncircle disabled  border border-secondary">
+              <img src="./images/icon-check.svg" class="  opacity-0 icone-checked">
           </button>
         </div>
         
@@ -26,53 +26,28 @@
               <input class=" form-control search" id="texttodo" type="text" placeholder="Create a new todo"  aria-label="Search">
         </div>
         <div>
-            <button type="button" class="btn opacity-0" >
-              <img src="./images/icon-cross.svg" class=" icone-checked" alt="nj">
+            <button type="button" class="bouton opacity-0" >
+              <img src="./images/icon-cross.svg" class=" icone-checked">
            </button>
       </div>
       
       </div>
     </form>
     
-    <div class="container d-flex  flex-column justify-content-center align-items-center mt-4 " id="divforAdd">
- 
+  <div class="added  d-flex flex-column   justify-content-center align-items-center mt-4 mx-auto">
+    <div class="d-flex  flex-column justify-content-center align-items-center mt-4 " id="divforAdd">
 
-   </div>
-   <div class="container d-sm-none d-flex flex-column justify-content-center align-items-center mb-4  " >
-    <div class=" p-2 rounded-bottom border-0 added   ">
-    <div class="d-sm-block text-center  itemadded">
-      <a href="#" class=" liens text-decoration-none" disabled > <span class="number">0</span>  items left</a>
 
     </div>
-
-
-    <div class=" d-sm-block text-center  itemadded">
-      <a href="#" class=" liens text-decoration-none" onclick="clearCompleted()" role="button" data-bs-toggle="button">clear completed</a>
-  </div>
-</div>
-</div>
-<div class="container d-flex flex-column justify-content-center align-items-center  " >
-      <div class=" p-2   border-0 added   ">
-      <div class="d-sm-block text-center d-none itemadded">
-        <a href="#" class=" liens text-decoration-none" disabled > <span class="number">0</span>  items left</a>
-
-      </div>
-      <div class="d-flex justify-content-center itemadded bas">
-        <a href="#" id="all" class=" liens text-decoration-none active " onclick="miseajour()" role="button" data-bs-toggle="button">All</a>
-        <a href="#" id="activiste" class=" liens text-decoration-none " onclick="filterActive()" role="button" data-bs-toggle="button">Active</a>
-        <a href="#" id="completed" class=" liens text-decoration-none active" onclick="filterComplete()"  data-bs-toggle="button">Complete</a>
+    <div class="itemadded pt-4 d-flex justify-content-between px-4 flex-wrap">
+        <a href="#" class="text-decoration-none me-2" disabled > <span class="number">0</span>  items left</a>
+        <a href="#" id="all" class="text-decoration-none active  bouton active-link me-2" onclick="miseajour()" >All</a>
+        <a href="#" id="activiste" class="text-decoration-none bouton me-2" onclick="filterActive()" role="button" data-bs-toggle="button">Active</a>
+        <a href="#" id="completed" class="text-decoration-none active bouton me-2" onclick="filterComplete()"  data-bs-toggle="button">Complete</a>
+        <a href="#" class="text-decoration-none bouton" onclick="clearCompleted()" role="button" data-bs-toggle="button">clear completed</a>
 
     </div>
-
-      <div class=" d-sm-block text-center d-none itemadded">
-        <a href="#" class=" liens text-decoration-none" onclick="clearCompleted()" role="button" data-bs-toggle="button">clear completed</a>
-    </div>
-  </div>
 </div>
-
- 
-
- 
   </section>
 
 
